@@ -1,6 +1,7 @@
 .languageSwitcher {
   position: relative;
-  z-index: 1000;
+  /* High z-index to ensure dropdown appears above all content */
+  z-index: 9999;
 }
 
 .dropdownButton {
@@ -61,15 +62,18 @@
   position: absolute;
   top: calc(100% + 0.5rem);
   right: 0;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
   border-radius: 8px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
   min-width: 160px;
   overflow: hidden;
   animation: slideDown 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 1001;
+  /* Maximum z-index to ensure dropdown appears above all content including sections */
+  z-index: 10000;
   border: 1px solid var(--accent-blue-200);
+  /* Ensure dropdown creates its own stacking context */
+  isolation: isolate;
 }
 
 @keyframes slideDown {

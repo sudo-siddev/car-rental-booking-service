@@ -52,8 +52,9 @@
   gap: 1rem;
   box-shadow: 0 4px 16px rgba(37, 99, 235, 0.3);
   position: relative;
-  overflow: hidden;
-  z-index: 1;
+  overflow: visible; /* Changed from 'hidden' to 'visible' to allow dropdown to overflow */
+  /* Higher z-index to ensure header and its children (like language switcher) appear above sections */
+  z-index: 10;
 }
 
 .headerLeft {
