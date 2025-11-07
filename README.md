@@ -418,4 +418,4 @@ The application is production-ready with:
   - Disables H2 console
   - Sanitizes sensitive data in logs
   - Uses generic error messages
-  - Enables security headers
+  - Enables security headersAdded setup note for PR
